@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserBehaviour : MonoBehaviour {
+public class DestroyLasers : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -13,4 +13,9 @@ public class LaserBehaviour : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void OnTriggerExit2D(Collider2D collider) {
+        Destroy(collider.gameObject);
+    }
+    
 }
